@@ -169,10 +169,12 @@ public class CraftInventoryCustom extends CraftInventory {
 
         @Override
         public void onOpen(PlayerEntity entityHuman) {
+
         }
 
         @Override
         public void onClose(PlayerEntity entityHuman) {
+
         }
 
         @Override
@@ -195,7 +197,9 @@ public class CraftInventoryCustom extends CraftInventory {
             ItemStack itemstack;
 
             do {
-                if (!iterator.hasNext()) return true;
+                if (!iterator.hasNext())
+                    return true;
+
                 itemstack = (ItemStack) iterator.next();
             } while (itemstack.isEmpty());
 
