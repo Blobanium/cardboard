@@ -305,16 +305,6 @@ public class Unsafe {
         unsafe.freeMemory(l);
     }
 
-    @Deprecated
-    public static int fieldOffset(Field field) {
-        return unsafe.fieldOffset(field);
-    }
-
-    @Deprecated
-    public static Object staticFieldBase(Class<?> aClass) {
-        return unsafe.staticFieldBase(aClass);
-    }
-
     public static long staticFieldOffset(Field field) {
         return unsafe.staticFieldOffset(field);
     }
@@ -366,21 +356,6 @@ public class Unsafe {
 
     public static Object allocateInstance(Class<?> aClass) throws InstantiationException {
         return unsafe.allocateInstance(aClass);
-    }
-
-    @Deprecated
-    public static void monitorEnter(Object o) {
-        unsafe.monitorEnter(o);
-    }
-
-    @Deprecated
-    public static void monitorExit(Object o) {
-        unsafe.monitorExit(o);
-    }
-
-    @Deprecated
-    public static boolean tryMonitorEnter(Object o) {
-        return unsafe.tryMonitorEnter(o);
     }
 
     public static void throwException(Throwable throwable) {
