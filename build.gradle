@@ -69,7 +69,7 @@ dependencies {
 
     configurations.compile.extendsFrom(configurations.extraLibs)
 
-    // Required Dependicies To Make JAR Buildable
+    // Required dependicies to make JAR buildable
     compile group: 'com.github.demidenko05', name: 'a-javabeans', version: '1.0.4'
 }
 
