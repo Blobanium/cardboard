@@ -27,6 +27,9 @@ import org.bukkit.Location;
 import org.bukkit.command.CommandSender;
 import org.bukkit.craftbukkit.CraftServer;
 import org.bukkit.craftbukkit.entity.CraftEntity;
+import org.bukkit.craftbukkit.entity.CraftHumanEntity;
+import org.cardboardpowered.impl.entity.LivingEntityImpl;
+import org.cardboardpowered.impl.entity.PlayerImpl;
 import org.bukkit.entity.Pose;
 import org.bukkit.event.entity.EntityAirChangeEvent;
 import org.bukkit.event.entity.EntityDropItemEvent;
@@ -256,7 +259,7 @@ public class MixinEntity implements IMixinCommandOutput, IMixinEntity {
             // Players
             if (entity instanceof PlayerEntity) {
                 if (entity instanceof ServerPlayerEntity) { return new PlayerImpl((ServerPlayerEntity) entity); }
-                else { return new HumanEntityImpl((PlayerEntity) entity); }
+                else { return new CraftHumanEntity((PlayerEntity) entity); }
             }
             // Water Animals
             else if (entity instanceof WaterCreatureEntity) {
